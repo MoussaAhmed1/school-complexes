@@ -5,7 +5,7 @@
 import { cookies } from "next/headers";
 
 import axiosInstance, { endpoints, getErrorMessage, Params } from "@/utils/axios-client";
-import { ITEMS_PER_PAGE } from "@/constants/data";
+import { ITEMS_PER_PAGE } from "../Global-variables";
 
 export const fetchFaqs = async ({
   page = 1,
