@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog";
 
 
-import { Eye, Pencil, Plus } from "lucide-react";
+import { Eye, Pencil } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { IUser } from "@/types/users";
 import { UserForm } from "./create-users/add-edit-user";
