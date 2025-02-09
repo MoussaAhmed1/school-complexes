@@ -10,7 +10,7 @@
     "security": "المشرفين",
     "watches": "الساعات",
     "historyOfRequests": "الطلبات المكتملة",
-    "general_settings": "الإعدادات العامة",
+    "general_settings": "سياسات الخصوصية والمعلومات",
     "notifications": "الإشعارات",
     "messages": "الرسائل",
     "contact_us": "اتصل بنا",
@@ -336,7 +336,7 @@
       "description": "الوصف"
     },
     "general_settings": {
-      "general_settings": "الاعدادات العامة",
+      "general_settings": "سياسات الخصوصية والمعلومات",
       "aboutUs": "من نحن",
       "titleInEnglish": "العنوان بالإنجليزية",
       "titleInArabic": "العنوان بالعربية",

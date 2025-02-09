@@ -3,8 +3,7 @@ import * as z from "zod";
 import { zfd } from "zod-form-data";
 const UserSchema = z.object({
   name : z.string().min(1, "Full name is required"),
-  gender: z.enum(["male", "female"]).optional(),
-  phone: validationRules.phone,
+  phone: validationRules.phone.optional(),
   city_id: z.string().optional(),
   avatarFile: z.union([
     zfd

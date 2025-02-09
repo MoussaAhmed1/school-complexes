@@ -10,7 +10,7 @@
     "security": "Supervisors",
     "watches": "Watches",
     "historyOfRequests": "Completed requests",
-    "general_settings": "General Settings",
+    "general_settings": "Policies & Information",
     "messages": "Messages",
     "notifications": "Notifications",
     "contact_us": "Contact us",
@@ -323,7 +323,7 @@
       "viewSchool": "View School"
     },
     "general_settings": {
-      "general_settings": "General Settings",
+      "general_settings": "Policies & Information",
       "aboutUs": "About Us",
       "commitmentDescription": "Get to know us and our commitment to you.",
       "descriptionInEnglish": "Description in English",

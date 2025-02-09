@@ -32,7 +32,6 @@ import AvatarPreview from "@/components/shared/AvatarPreview";
 import { AddUser, UpdateUser } from "@/actions/users/users-actions";
 import { useTranslations } from "next-intl";
 import { ICity, IUser, Role } from "@/types/users";
-import { shortenText } from "@/utils/helperFunctions";
 import Link from "next/link";
 import CustomPhoneInput from "../../phone-input";
 export type UserFormValues = z.infer<typeof UserSchema>;
@@ -316,13 +315,13 @@ export const UserForm: React.FC<UserFormProps> = ({
                 />
               )}
               <div>
-                <label className="block mb-2 font-medium">{t("phone")}<span className="text-red-800">*</span></label>
+                <label className="block mb-2 font-medium">{t("phone")}</label>
                 {!readOnly ? ( <Controller
                   name="phone"
                   control={control}
                   render={({ field }) => (
                     <CustomPhoneInput
-                      value={field.value}
+                      value={field?.value??""}
                       onChange={(value) =>{ 
                         if (!value.startsWith("+")) {
                           value = `+${value}`;
