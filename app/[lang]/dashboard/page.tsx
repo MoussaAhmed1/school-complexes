@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default async function page() {
-  redirect("/dashboard/watches");
+  redirect("/dashboard/users/schools");
 }

@@ -3,8 +3,6 @@ import * as z from "zod";
 
 const ProfileSchema = z.object({
   name : z.string().min(1, "Full name is required"),
-  birth_date: validationRules.date,
-  gender: z.enum(["male", "female"]),
   phone: validationRules.phone,
   avatarFile: validationRules.image.optional(),
   email: z.string().email({ message: "Invalid email address" }),

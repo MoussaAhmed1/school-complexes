@@ -3,11 +3,9 @@
 /* eslint-disable consistent-return */
 
 import { cookies } from "next/headers";
-import { revalidateTag } from "next/cache";
 
 import axiosInstance, { endpoints, getErrorMessage, Params } from "@/utils/axios-client";
-import { AddEditFaqsBody } from "@/types/settings/faqs";
-import { ITEMS_PER_PAGE } from "../Global-variables";
+import { ITEMS_PER_PAGE } from "@/constants/data";
 
 export const fetchFaqs = async ({
   page = 1,
@@ -31,74 +29,6 @@ export const fetchFaqs = async ({
     });
     return res;
   } catch (error: any) {
-    return {
-      error: getErrorMessage(error),
-    };
-  }
-};
-export const AddFAQ = async (
-  data: AddEditFaqsBody,
-): Promise<any> => {
-  const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
-
-  try {
-    await axiosInstance.post(endpoints.faq.fetch, data, {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-        "Accept-Language": lang,
-      },
-    });
-
-    revalidateTag("/faq");
-  } catch (error) {
-    return {
-      error: getErrorMessage(error),
-    };
-  }
-};
-
-export const UpdateFAQ = async (
-  data: AddEditFaqsBody,id:string|undefined
-): Promise<any> => {
-  const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
-
-  try {
-    await axiosInstance.put(
-      `${endpoints.faq.fetch}/${id}`,
-      data,
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-          "Accept-Language": lang,
-        },
-      },
-    );
-
-    revalidateTag("/faq");
-  } catch (error:any) {
-    return {
-      error: getErrorMessage(error),
-    };
-  }
-};
-export const deleteFAQ = async (id: string): Promise<any> => {
-  const accessToken = cookies().get("access_token")?.value;
-  const lang = cookies().get("Language")?.value;
-
-  try {
-    await axiosInstance.delete(
-      `${endpoints.faq.fetch}/${id}`,
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-          "Accept-Language": lang,
-        },
-      },
-    );
-    revalidateTag("/faq");
-  } catch (error) {
     return {
       error: getErrorMessage(error),
     };

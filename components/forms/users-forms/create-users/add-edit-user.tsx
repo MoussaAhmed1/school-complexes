@@ -44,7 +44,7 @@ interface UserFormProps {
   schools?: IUser[];
   cities?: ICity[];
   readOnly?: boolean;
-  _role?: "parents" | "drivers" | "schools" | "security" | "admins"| "school_admin";
+  _role?:  "schools" ;
   closeDailog?: () => void;
 }
 
@@ -54,7 +54,7 @@ export const UserForm: React.FC<UserFormProps> = ({
   schools,
   cityName,
   cities,
-  _role = "parents",
+  _role = "schools",
   readOnly = false,
   closeDailog,
 }) => {
@@ -66,49 +66,22 @@ export const UserForm: React.FC<UserFormProps> = ({
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
   const getTitle = useCallback(() => {
-    if (_role === "security") {
-      return t("addSecurity");
-    } else if (_role === "parents") {
-      return t("addParent");
-    } else if (_role === "drivers") {
-      return t("addDriver");
-    } else if (_role === "schools") {
+    
+    if (_role === "schools") {
       return t("addSchool");
     }
-     else if (_role === "school_admin") {
-      return t("addSchoolAdmin");
-    }
-    return t("addAdmins");
   }, [_role, t]);
   const getTitleEdit = useCallback(() => {
     if (readOnly) {
-      if (_role === "security") {
-        return t("viewSecurity");
-      } else if (_role === "parents") {
-        return t("viewParent");
-      } else if (_role === "drivers") {
-        return t("viewDriver");
-      } else if (_role === "schools") {
+
+       if (_role === "schools") {
         return t("viewSchool");
       }
-       else if (_role === "school_admin") {
-        return t("viewSchoolAdmin");
-      }
-      return t("viewAdmins");
-    }
 
-    if (_role === "security") {
-      return t("editSecurity");
-    } else if (_role === "parents") {
-      return t("editParent");
-    } else if (_role === "drivers") {
-      return t("editDriver");
-    } else if (_role === "schools") {
-      return t("editSchool");
-    } else if (_role === "school_admin") {
-      return t("editSchoolAdmin");
     }
-    return t("editAdmins");
+ if (_role === "schools") {
+      return t("editSchool");
+    } 
   }, [_role, readOnly, t]);
 
   const action = initialData ? tShared("saveChanges") : tShared("create");
@@ -202,7 +175,7 @@ export const UserForm: React.FC<UserFormProps> = ({
       });
       //TODO: redirect to dashboard
       if (!initialData) {
-        const role = _role === "school_admin" ? "school-complexes" : _role;
+        const role = _role;
         router.push(`/dashboard/users/${role}`);
       } else {
         if (closeDailog) {
@@ -219,7 +192,7 @@ export const UserForm: React.FC<UserFormProps> = ({
   return (
     <>
       <div className="flex items-center justify-between">
-        <Heading title={title} />
+        <Heading title={title as string} />
       </div>
 
       <Card
@@ -412,55 +385,6 @@ export const UserForm: React.FC<UserFormProps> = ({
                   </FormMessage>
                 )}
               </FormItem>
-           
-            {_role === "security" && (
-              <>
-                {/* School */}
-                <FormField
-                  name="school_id"
-                  control={control}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>
-                        {t("school")} <span className="text-red-800">*</span>
-                      </FormLabel>
-                      <FormControl>
-                        {readOnly ? (
-                          <p>
-                            {
-                              schools?.filter(
-                                (school) => school?.school?.id === field.value,
-                              )[0]?.name
-                            }
-                          </p>
-                        ) : (
-                          <ShadcnSelect
-                            required
-                            {...field}
-                            onValueChange={field.onChange}
-                            dir={currentLang === "ar" ? "rtl" : "ltr"}
-                          >
-                            <SelectTrigger>
-                              <SelectValue placeholder={t("selectSchool")} />
-                            </SelectTrigger>
-                            <SelectContent className="max-h-[200px]">
-                              {schools?.map((school) => (
-                                <SelectItem
-                                  value={school?.school?.id || ""}
-                                  key={school?.id}
-                                >
-                                  {school?.name}
-                                </SelectItem>
-                              ))}
-                            </SelectContent>
-                          </ShadcnSelect>
-                        )}
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-              </>
-            )}
            
               <FormField
                 control={form.control}

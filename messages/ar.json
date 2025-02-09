@@ -25,7 +25,12 @@
   "Primary": "الابتدائية",
   "Intermediate": "المتوسطة",
   "Secondary": "الثانوية",
-  "schoolComplexes": "المجمعات المدرسية"
+  "schoolComplexes": "المجمعات المدرسية",
+  "students": "الطلاب",
+  "confirmedRequests": "الطلبات المؤكدة",
+  "suggestionsComplaintsTitle": "الاقتراحات والشكاوى",
+  "suggestionsComplaintsDescription": "نقدر ملاحظاتكم. يرجى تقديم أي اقتراحات أو شكاوى قد تكون لديكم.",
+   "requestsPickupTime": "وقت استلام الطلبات"
   },
   "cities":{
     "name_en": "الاسم بالإنجليزية",
@@ -355,6 +360,8 @@
       "faqName": "اسم السؤال المتكرر",
       "nameInArabic": "الاسم بالعربية",
       "faqNameArabic": "اسم السؤال المتكرر",
+      "exploreCommonQuestions": "استكشف الأسئلة الشائعة",
+"stillHaveQuestions": "هل ما زال لديك اسئلة ؟",
 
       "termsAndConditions": "الشروط والأحكام",
       "termsAndConditionsDescription": "اقرأ الشروط والأحكام لفهم التزامنا تجاهك.",
@@ -404,7 +411,10 @@
       "socialLinkCreated": "تم إنشاء الرابط الاجتماعي.",
       "editUser": "تعديل المستخدم",
       "viewUser": "عرض المستخدم",
-      "privacyPolicy": "سياسة الخصوصية"
+      "privacyPolicy": "سياسة الخصوصية",
+      "suggestionsComplaintsTitle": "الاقتراحات والشكاوى",
+      "suggestionsComplaintsDescription": "نقدر ملاحظاتكم. يرجى تقديم أي اقتراحات أو شكاوى قد تكون لديكم.",
+       "requestsPickupTime": "وقت استلام الطلبات"
     },
     "users": {
       "Admins": "المديرون",

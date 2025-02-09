@@ -24,7 +24,15 @@
     "Primary": "Primary",
     "Intermediate": "Intermediate",
     "Secondary": "Secondary",
-    "schoolComplexes": "School Complexes"
+    "schoolComplexes": "School Complexes",
+    "Supervisor": "Supervisor",
+    "students": "Students",
+
+    "confirmedRequests": "Confirmed requests",
+
+    "suggestionsComplaintsTitle": "Suggestions & Complaints",
+    "suggestionsComplaintsDescription": "We value your feedback. Please submit any suggestions or complaints you may have.",
+     "requestsPickupTime": "Requests Receiving Time"
   },
   "cities": {
     "cities": "Cities",
@@ -330,6 +338,8 @@
       "privacyPolicyUpdated": "Privacy policy updated",
       "privacyPolicySuccessfullyUpdated": "Privacy policy have been successfully updated.",
       "privacyPolicyUpdateFailed": "Privacy policy update failed",
+      "exploreCommonQuestions": "Explore Common Questions",
+      "stillHaveQuestions": "Still have questions? Contact our support",
 
       "faqs": "FAQs",
       "addFAQ": "Add FAQ",
@@ -388,7 +398,15 @@
       "socialLinkCreated": "Social Link created.",
       "editUser": "Edit User",
       "viewUser": "View User",
-      "privacyPolicy": "Privacy Policy"
+      "privacyPolicy": "Privacy Policy",
+
+
+
+
+      "suggestionsComplaintsTitle": "Suggestions & Complaints",
+      "suggestionsComplaintsDescription": "We value your feedback. Please submit any suggestions or complaints you may have.",
+      "editSecurity": "Edit Supervisor"
+
     },
     "users": {
       "Admins": "Admins",

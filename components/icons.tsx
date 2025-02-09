@@ -1,3 +1,4 @@
+import { info } from "console";
 import {
   AlertTriangle,
   ArrowRight,
@@ -57,7 +58,8 @@ import {
   MapPinOffIcon,
   MapPin,
   School,
-  Building2 
+  Building2,
+  Info,
 } from "lucide-react";
 
 export type Icon = LucideIcon;
@@ -117,7 +119,8 @@ export const Icons = {
  city: MapPin,
  trello: Trello,
  school: School,
-schoolComplexes: Building2
+schoolComplexes: Building2,
+info: Info
 ,
   gitHub: ({ ...props }: LucideProps) => (
     <svg

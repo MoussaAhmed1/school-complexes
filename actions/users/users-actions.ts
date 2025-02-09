@@ -11,23 +11,11 @@ import axiosInstance, {
 } from "../../utils/axios-client";
 import { ITEMS_PER_PAGE } from "../Global-variables";
 
-export const fetchUsers = async ({
-  page = 1,
-  limit = ITEMS_PER_PAGE,
-  role,
-  filters,
-  otherfilters,
-}: Params): Promise<any> => {
+export const fetchUsers = async (): Promise<any> => {
   const lang = cookies().get("Language")?.value;
   const accessToken = cookies().get("access_token")?.value;
   try {
-    const res = await axiosInstance.get(endpoints.users.fetch, {
-      params: {
-        page,
-        limit,
-        filters:filters?[`name=${filters},roles=${role}`,`phone=${filters},roles=${role}`,`email=${filters},roles=${role}`]:`roles=${role}`,
-        sortBy: "created_at=desc",
-      },
+    const res = await axiosInstance.get('/user/schools', {   
       headers: {
         Authorization: `Bearer ${accessToken}`,
         "Accept-Language": lang,
@@ -41,12 +29,11 @@ export const fetchUsers = async ({
   }
 };
 
-export const AddUser = async (formData: FormData,role:"parents" | "drivers" | "schools" |"security"|"admins"|"school_admin"): Promise<any> => {
+export const AddUser = async (formData: FormData,role: "schools"): Promise<any> => {
     const lang = cookies().get("Language")?.value;
-    const endpoint= role === "school_admin" ? endpoints.users.register_school : endpoints.users.register;
     try {
       const accessToken = cookies().get("access_token")?.value;
-      await axiosInstance.post(endpoint, formData, {
+      await axiosInstance.post(endpoints.users.register_school, formData, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
           "Accept-Language": lang,

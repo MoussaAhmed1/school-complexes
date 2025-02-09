@@ -20,8 +20,6 @@ export default async function ProfilePage({params}:{params:{lang:"ar"|"en"}}) {
       <UserProfileForm
         id={""}
         initialData={session?.user ? {
-          birth_date: session?.user?.birth_date,
-          gender: session?.user?.gender as "male" | "female",
           phone: session?.user?.phone,
           avatarFile: session.user?.avatar,
           email: session?.user?.email,
