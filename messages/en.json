@@ -155,7 +155,8 @@
     "watchUsersCount": "Watch Users",
     "student": "Student",
     "school": "School",
-    "academic_stage": "Academic Stage"
+    "academic_stage": "Academic Stage",
+    "text": "Text"
   },
   "pages": {
     "home": {
