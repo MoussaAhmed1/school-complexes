@@ -50,7 +50,7 @@ export const AddUser = async (formData: FormData,role: "schools"): Promise<any> 
   };
   
 
-export const UpdateUser = async (formData: FormData,role:"parents" | "drivers" | "schools" |"security"|"admins"|'school_admin',id?:string): Promise<any> => {
+export const UpdateUser = async (formData: FormData,role:"parents" | "drivers" | "schools" |"security"|"admins"|'SUPERVISOR',id?:string): Promise<any> => {
     const lang = cookies().get("Language")?.value;
     try {
       const accessToken = cookies().get("access_token")?.value;

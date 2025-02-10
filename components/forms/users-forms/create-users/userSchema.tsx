@@ -29,7 +29,7 @@ const UserSchema = z.object({
       message: 'String must be a valid image URL (jpeg, png, gif)',
     })
   ]).optional(),
-  role: z.enum(["PARENT", "DRIVER", "SCHOOL", "SECURITY","ADMIN","SCHOOL_ADMIN"]),
+  role: z.enum(["PARENT", "DRIVER", "SCHOOL", "SECURITY","ADMIN","SUPERVISOR"]),
   academic_stage: z.enum(["Kindergarten", "Primary", "Intermediate", "Secondary"]).optional(),
   school_id: z.string().optional(),
   email: z.string().email({ message: "Invalid email address" }),
