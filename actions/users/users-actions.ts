@@ -21,6 +21,7 @@ export const fetchUsers = async (): Promise<any> => {
         "Accept-Language": lang,
       },
     });
+    console.log(res.data.school)
     return res;
   } catch (error: any) {
     return {
@@ -136,29 +137,29 @@ export const removeUser = async ({id,revalidateData}:{id:string,revalidateData?:
     }
   };
 
-  export const fetchCities = async ({
-    page = 1,
-    limit = ITEMS_PER_PAGE,
-  }: Params): Promise<any> => {
-    const lang = cookies().get("Language")?.value;
-    const accessToken = cookies().get("access_token")?.value;
-    try {
-      const res = await axiosInstance.get(endpoints.users.cities, {
-        params: {
-          page,
-          limit,
-        }
-          ,
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-          "Accept-Language": lang,
-        },
-      });
-      return(res.data)
-    } catch (error: any) {
-      return {
-        error: getErrorMessage(error),
-      };
-    }
-  };
+export const fetchCities = async ({
+  page = 1,
+  limit = ITEMS_PER_PAGE,
+}: Params): Promise<any> => {
+  const lang = cookies().get("Language")?.value;
+  const accessToken = cookies().get("access_token")?.value;
+  try {
+    const res = await axiosInstance.get(endpoints.users.cities, {
+      params: {
+        page,
+        limit,
+      }
+        ,
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        "Accept-Language": lang,
+      },
+    });
+    return(res.data)
+  } catch (error: any) {
+    return {
+      error: getErrorMessage(error),
+    };
+  }
+};
 

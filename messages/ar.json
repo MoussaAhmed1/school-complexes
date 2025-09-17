@@ -30,7 +30,11 @@
   "confirmedRequests": "الطلبات المؤكدة",
   "suggestionsComplaintsTitle": "الاقتراحات والشكاوى",
   "suggestionsComplaintsDescription": "نقدر ملاحظاتكم. يرجى تقديم أي اقتراحات أو شكاوى قد تكون لديكم.",
-   "requestsPickupTime": "وقت استلام الطلبات"
+   "requestsPickupTime": "وقت استلام الطلبات",
+   "studentAttendanceStats": "إحصائيات انصراف الطلاب والطالبات",
+   "completed": "المكتملة",
+   "confirmed": "المؤكدة",
+   "pending": "قيد الانتظار"
   },
   "cities":{
     "name_en": "الاسم بالإنجليزية",

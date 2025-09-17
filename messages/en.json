@@ -32,7 +32,11 @@
 
     "suggestionsComplaintsTitle": "Suggestions & Complaints",
     "suggestionsComplaintsDescription": "We value your feedback. Please submit any suggestions or complaints you may have.",
-     "requestsPickupTime": "Requests Receiving Time"
+     "requestsPickupTime": "Requests Receiving Time",
+     "studentAttendanceStats": "Student Attendance Statistics",
+     "completed": "Completed",
+     "confirmed": "Confirmed",
+     "pending": "Pending"
   },
   "cities": {
     "cities": "Cities",
