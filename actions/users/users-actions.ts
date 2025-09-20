@@ -154,8 +154,10 @@ export const removeUser = async ({id,revalidateData}:{id:string,revalidateData?:
           "Accept-Language": lang,
         },
       });
+      console.log('--------------------------res',res);
       return(res.data)
     } catch (error: any) {
+      console.log('--------------------------error',error);
       return {
         error: getErrorMessage(error),
       };
