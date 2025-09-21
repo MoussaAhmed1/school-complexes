@@ -14,7 +14,6 @@ import {
 } from "./ui/accordion";
 import Cookies from 'js-cookie';
 import { useTranslations } from "next-intl";
-import { SimpleStaticSidebar } from "./simple-static-sidebar";
 interface DashboardNavProps {
   _items: NavItem[];
   setOpen?: Dispatch<SetStateAction<boolean>>;
@@ -42,10 +41,7 @@ export function DashboardNav({ _items, setOpen }: DashboardNavProps) {
   const items = _items
 
   return (
-    <nav className="grid items-start gap-2">
-      {/* إحصائيات انصراف الطلاب الثابتة */}
-      <SimpleStaticSidebar />
-      
+    <nav className="grid items-start gap-2">      
       {items?.map((link, index) => {
         if (!link?.children) {
           const Icon = Icons[link.icon || "arrowRight"];

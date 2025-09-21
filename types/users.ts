@@ -16,6 +16,9 @@ export interface ILogedUser {
 }
 
 export interface IUser {
+  pending_requests: number;
+  confirmed_requests: number;
+  completed_requests: number;
   city_id: any;
   id: string;
   name: string;

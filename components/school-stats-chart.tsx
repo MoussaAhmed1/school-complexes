@@ -145,41 +145,6 @@ export default function SchoolStatsChart() {
         </div>
       )}
 
-      {/* عرض الإحصائيات كبطاقات */}
-      {selectedSchool && (
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          {schoolStats
-            .filter(stat => stat.schoolId === selectedSchool)
-            .map((stats) => (
-              <div key={stats.schoolId} className="space-y-4">
-                <div className="text-center p-4 bg-blue-50 rounded-lg border border-blue-200">
-                  <div className="text-2xl font-bold text-blue-700 mb-1">
-                    {stats.pending}
-                  </div>
-                  <div className="text-sm font-medium text-blue-600">
-                    {t("pending")}
-                  </div>
-                </div>
-                <div className="text-center p-4 bg-orange-50 rounded-lg border border-orange-200">
-                  <div className="text-2xl font-bold text-orange-700 mb-1">
-                    {stats.confirmed}
-                  </div>
-                  <div className="text-sm font-medium text-orange-600">
-                    {t("confirmed")}
-                  </div>
-                </div>
-                <div className="text-center p-4 bg-green-50 rounded-lg border border-green-200">
-                  <div className="text-2xl font-bold text-green-700 mb-1">
-                    {stats.completed}
-                  </div>
-                  <div className="text-sm font-medium text-green-600">
-                    {t("completed")}
-                  </div>
-                </div>
-              </div>
-            ))}
-        </div>
-      )}
     </div>
   );
 }

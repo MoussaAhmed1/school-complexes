@@ -83,6 +83,18 @@ export const SchoolColumns: ColumnDef<IUser>[] = [
     cell: ({ row }) => <p className="rtl:text-right text-left" dir="ltr">{row?.original?.school?.academic_stage}</p>,
   },
   {
+    accessorKey: "pending_requests",
+    header: "pending",
+  },
+  {
+    accessorKey: "confirmed_requests",
+    header: "confirmed",
+  },
+  {
+    accessorKey: "completed_requests",
+    header: "completed",
+  },
+  {
     id: "actions",
     cell: ({ row }) => <CellAction data={row.original} />,
   },
