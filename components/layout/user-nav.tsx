@@ -1,5 +1,6 @@
 "use client";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Cookies from "js-cookie"
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -53,6 +54,7 @@ export function UserNav({lang}:{lang:Language}) {
           <DropdownMenuItem onClick={() => {
             		signOut({ redirect: false }).then(() => {
                   push("/");
+                   Cookies.remove("access_token_complexes");
                 });
             }}>
             {t("logout")}
