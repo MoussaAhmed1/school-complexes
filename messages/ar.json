@@ -21,18 +21,25 @@
     "privacyPolicy": "سياسة الخصوصية",
     "cities": "المدن",
     "academic_stage": "مراحل الدراسة",
-  "Kindergarten": "رياض الأطفال",
-  "Primary": "الابتدائية",
-  "Intermediate": "المتوسطة",
-  "Secondary": "الثانوية",
-  "schoolComplexes": "المجمعات المدرسية",
-  "students": "الطلاب",
-  "confirmedRequests": "الطلبات المؤكدة",
-  "suggestionsComplaintsTitle": "الاقتراحات والشكاوى",
-  "suggestionsComplaintsDescription": "نقدر ملاحظاتكم. يرجى تقديم أي اقتراحات أو شكاوى قد تكون لديكم.",
-   "requestsPickupTime": "وقت استلام الطلبات"
+    "Kindergarten": "رياض الأطفال",
+    "Primary": "الابتدائية",
+    "Intermediate": "المتوسطة",
+    "Secondary": "الثانوية",
+    "schoolComplexes": "المجمعات المدرسية",
+    "students": "الطلاب",
+    "confirmedRequests": "الطلبات المؤكدة",
+    "suggestionsComplaintsTitle": "الاقتراحات والشكاوى",
+    "suggestionsComplaintsDescription": "نقدر ملاحظاتكم. يرجى تقديم أي اقتراحات أو شكاوى قد تكون لديكم.",
+    "requestsPickupTime": "وقت استلام الطلبات",
+    "studentAttendanceStats": "إحصائيات انصراف الطلاب والطالبات",
+    "completed": "المكتملة",
+    "confirmed": "المؤكدة",
+    "pending": "قيد الانتظار",
+
+    "totalRequests": "إجمالي الطلبات",
+    "chartTitle": "الرسم البياني العمودي"
   },
-  "cities":{
+  "cities": {
     "name_en": "الاسم بالإنجليزية",
     "name_ar": "الاسم بالعربية",
     "createCity": "اضافة مدينة",
@@ -92,7 +99,7 @@
     "somthingwentwrong": "هناك خطأ ما",
     "submit": "ارسال",
     "Forgotpassword ?": "نسيت كلمة المرور ؟",
-    "email": "البريد الاليكتروني" 
+    "email": "البريد الاليكتروني"
   },
   "tableActions": {
     "view": "عرض",
@@ -109,7 +116,6 @@
     "unlinkedSuccessfully": "تم إلغاء الارتباط بنجاح",
     "unlinkWatch": "إلغاء ارتباط الساعة",
     "confirmUnlinkWatch": "هل أنت متأكد أنك تريد إلغاء ارتباط هذه الساعة؟"
-
   },
   "tableColumns": {
     "name": "الاسم",
@@ -169,8 +175,10 @@
     "watchUsersCount": "عدد الطلاب المراقبون",
     "school": "المدرسة",
     "academic_stage": "المرحلة الدراسية",
-    "text": "النص"
-
+    "text": "النص",
+    "completed": "المكتملة",
+    "confirmed": "المؤكدة",
+    "pending": "قيد الانتظار"
   },
   "pages": {
     "home": {
@@ -219,7 +227,7 @@
       "name_ar": "الاسم بالعربية",
       "order_by": "الترتيب",
       "code": "الكود",
-      
+
       "termsAndConditions": "الشروط والأحكام",
       "termsAndConditionsDescription": "اقرأ الشروط والأحكام لفهم التزامنا تجاهك.",
       "termsAndConditionsUpdated": "تم تحديث الشروط والأحكام",
@@ -362,7 +370,7 @@
       "nameInArabic": "الاسم بالعربية",
       "faqNameArabic": "اسم السؤال المتكرر",
       "exploreCommonQuestions": "استكشف الأسئلة الشائعة",
-"stillHaveQuestions": "هل ما زال لديك اسئلة ؟",
+      "stillHaveQuestions": "هل ما زال لديك اسئلة ؟",
 
       "termsAndConditions": "الشروط والأحكام",
       "termsAndConditionsDescription": "اقرأ الشروط والأحكام لفهم التزامنا تجاهك.",
@@ -415,7 +423,7 @@
       "privacyPolicy": "سياسة الخصوصية",
       "suggestionsComplaintsTitle": "الاقتراحات والشكاوى",
       "suggestionsComplaintsDescription": "نقدر ملاحظاتكم. يرجى تقديم أي اقتراحات أو شكاوى قد تكون لديكم.",
-       "requestsPickupTime": "وقت استلام الطلبات"
+      "requestsPickupTime": "وقت استلام الطلبات"
     },
     "users": {
       "Admins": "المديرون",
@@ -528,7 +536,6 @@
       "Intermediate": "المتوسطة",
       "Secondary": "الثانوية",
       "grade": "المرحلة الدراسية"
-      
     },
     "requestDetails": {
       "title": "تفاصيل الطلب ",

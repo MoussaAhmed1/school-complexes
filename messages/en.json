@@ -28,11 +28,18 @@
     "Supervisor": "Supervisor",
     "students": "Students",
 
+    "totalRequests": "Total Requests",
+    "chartTitle": "Column Chart",
+
     "confirmedRequests": "Confirmed requests",
 
     "suggestionsComplaintsTitle": "Suggestions & Complaints",
     "suggestionsComplaintsDescription": "We value your feedback. Please submit any suggestions or complaints you may have.",
-     "requestsPickupTime": "Requests Receiving Time"
+    "requestsPickupTime": "Requests Receiving Time",
+    "studentAttendanceStats": "Student Attendance Statistics",
+    "completed": "Completed",
+    "confirmed": "Confirmed",
+    "pending": "Pending"
   },
   "cities": {
     "cities": "Cities",
@@ -156,7 +163,10 @@
     "student": "Student",
     "school": "School",
     "academic_stage": "Academic Stage",
-    "text": "Text"
+    "text": "Text",
+    "completed": "Completed",
+    "confirmed": "Confirmed",
+    "pending": "Pending"
   },
   "pages": {
     "home": {
@@ -401,13 +411,9 @@
       "viewUser": "View User",
       "privacyPolicy": "Privacy Policy",
 
-
-
-
       "suggestionsComplaintsTitle": "Suggestions & Complaints",
       "suggestionsComplaintsDescription": "We value your feedback. Please submit any suggestions or complaints you may have.",
       "editSecurity": "Edit Supervisor"
-
     },
     "users": {
       "Admins": "Admins",

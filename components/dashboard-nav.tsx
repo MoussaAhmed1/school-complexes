@@ -41,7 +41,7 @@ export function DashboardNav({ _items, setOpen }: DashboardNavProps) {
   const items = _items
 
   return (
-    <nav className="grid items-start gap-2">
+    <nav className="grid items-start gap-2">      
       {items?.map((link, index) => {
         if (!link?.children) {
           const Icon = Icons[link.icon || "arrowRight"];

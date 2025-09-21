@@ -19,7 +19,7 @@ export const fetchWatches = async ({
   filters,
 }: Params): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     const res = await axiosInstance.get(endpoints.watches.fetch, {
       params: {
@@ -43,7 +43,7 @@ export const fetchWatches = async ({
 
 export const fetchSingleWatche = async (id: string): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     const res = await axiosInstance.get(
       endpoints.watches.fetchSingleWatch + "/" + id,
@@ -64,7 +64,7 @@ export const fetchSingleWatche = async (id: string): Promise<any> => {
 
 export const AddWatch = async (data: AddEditWatchBody): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
 
   try {
     await axiosInstance.post(endpoints.watches.create + "/" + data.IMEI, data, {
@@ -83,7 +83,7 @@ export const AddWatch = async (data: AddEditWatchBody): Promise<any> => {
 };
 export const EditWatch = async (data: AddEditWatchBody): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
 
   try {
     await axiosInstance.post(
@@ -107,7 +107,7 @@ export const EditWatch = async (data: AddEditWatchBody): Promise<any> => {
 
 export const deleteWatch = async (id: string): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
 
   try {
     await axiosInstance.delete(endpoints.watches.delete + "/" + id, {
@@ -126,7 +126,7 @@ export const deleteWatch = async (id: string): Promise<any> => {
 };
 export const unlinkWatch = async (id: string): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
 
   try {
     await axiosInstance.delete(endpoints.watches.unlink + "/" + id, {
@@ -146,7 +146,7 @@ export const unlinkWatch = async (id: string): Promise<any> => {
 
 export const onImportFile = async ({ file }: { file: FormData }): Promise<any> => {
   const lang = cookies().get('Language')?.value;
-  const accessToken = cookies().get('access_token')?.value;
+  const accessToken = cookies().get('access_token_complexes')?.value;
   try {
   const res =  await axiosInstance.post(endpoints.watches.ImportFile, file, {
       headers: {

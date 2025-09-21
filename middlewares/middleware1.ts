@@ -39,7 +39,7 @@ export function withAuthMiddleware(middleware: CustomMiddleware) {
     const protectedPathsWithLocale = getProtectedRoutes(protectedPaths, [
       ...i18n.locales
     ])
-    const apiToken = cookies()?.get("access_token")?.value;
+    const apiToken = cookies()?.get("access_token_complexes")?.value;
     if (
       !(apiToken && token) &&
       (protectedPathsWithLocale.includes(pathname) ||

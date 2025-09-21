@@ -20,6 +20,13 @@ export const navItems: NavItem[] = [
     subItems: false,
   },
   {
+    title: "Student Attendance Statistics",
+    href: "/dashboard/student-attendance",
+    icon: "barChart",
+    label: "studentAttendanceStats",
+    subItems: false,
+  },
+  {
     title: "Notifications",
     href: "/dashboard/notifications",
     icon: "notification",

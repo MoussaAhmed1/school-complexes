@@ -13,7 +13,7 @@ export const fetchSuggestions = async ({
   filters,
 }: Params): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     const res = await axiosInstance(endpoints.suggestions.fetch, {
       params: {
@@ -40,7 +40,7 @@ export const fetchSuggestions = async ({
 
 export const fetchSingleSuggestion = async (id: string): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     const res = await axiosInstance(`${endpoints.suggestions.fetch}/${id}`, {
       headers: {
@@ -59,7 +59,7 @@ export const fetchSingleSuggestion = async (id: string): Promise<any> => {
 
 export const ReplyOnSuggestion = async (data:Reply): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     await axiosInstance.post(`${endpoints.suggestions.reply}`,data, {
       headers: {

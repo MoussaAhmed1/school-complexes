@@ -8,7 +8,7 @@ export interface Params {
   filters?: string;
   otherfilters?: string[];
   created_at?: string;
-  headers?: { access_token: string };
+  headers?: { access_token_complexes: string };
 }
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_HOST_API,

@@ -2,6 +2,7 @@ import { info } from "console";
 import {
   AlertTriangle,
   ArrowRight,
+  BarChart3,
   Check,
   ChevronLeft,
   ChevronRight,
@@ -118,10 +119,10 @@ export const Icons = {
  watches: Watch,
  city: MapPin,
  trello: Trello,
- school: School,
+  school: School,
 schoolComplexes: Building2,
-info: Info
-,
+info: Info,
+barChart: BarChart3,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

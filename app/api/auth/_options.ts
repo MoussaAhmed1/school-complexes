@@ -70,7 +70,7 @@ export const authOptions = {
         token.accessToken = user.data?.access_token;
         const lang = cookies().get("Language")?.value || cookies().get("lang")?.value||"ar";
         cookies().set("Language", lang , {path: "/"});
-        cookies().set("access_token", user.data?.access_token, {
+        cookies().set("access_token_complexes", user.data?.access_token, {
           path: "/",
           httpOnly: true,
           sameSite: "strict",

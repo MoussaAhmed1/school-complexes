@@ -12,10 +12,13 @@ export interface ILogedUser {
   gender: string;
   language: string;
   fcm_token: any;
-  access_token: string;
+  access_token_complexes: string;
 }
 
 export interface IUser {
+  pending_requests: number;
+  confirmed_requests: number;
+  completed_requests: number;
   city_id: any;
   id: string;
   name: string;

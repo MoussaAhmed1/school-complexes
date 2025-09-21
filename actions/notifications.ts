@@ -16,7 +16,7 @@ export const fetchNotifications = async ({
   filters,
 }: Params): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     const res = await axiosInstance(endpoints.notification.fetch, {
       params: {
@@ -40,7 +40,7 @@ export const fetchNotifications = async ({
 
 export const fetchSingleNotification = async (id:string): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     const res = await axiosInstance(`${endpoints.notification.fetch}/${id}`, {
       headers: {
@@ -68,7 +68,7 @@ interface NotificationBody {
 
 export async function sendNotifications(reqBody: NotificationBody) {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get('access_token')?.value;
+  const accessToken = cookies().get('access_token_complexes')?.value;
 
   try {
     const res = await axiosInstance.post(`${endpoints.notification.send}`, reqBody, {
