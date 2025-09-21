@@ -13,7 +13,7 @@ export const fetchFaqs = async ({
   filters,
 }: Params): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     const res = await axiosInstance(endpoints.faq.fetch, {
       params: {

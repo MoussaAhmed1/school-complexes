@@ -9,7 +9,7 @@ export const fetchStatictics = async ({
 }: {
   lang: string;
 }): Promise<any> => {
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
 
   try {
     const res = await axiosInstance.get(endpoints.addetionalInfo.statictics, {

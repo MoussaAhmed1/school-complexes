@@ -13,7 +13,7 @@ export const AddSuggestions = async (data: suggestionsBody): Promise<any> => {
   const lang = cookies().get("Language")?.value;
 
   try {
-    const accessToken = cookies().get("access_token")?.value;
+    const accessToken = cookies().get("access_token_complexes")?.value;
     await axiosInstance.post("/suggestions-complaints", data, {
       headers: {
         Authorization: `Bearer ${accessToken}`,

@@ -18,7 +18,7 @@ export const fetchRequests = async ({
 
 }: Params): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     const res = await axiosInstance.get(endpoints.watches.history_request, {
       params: {
@@ -41,7 +41,7 @@ export const fetchRequests = async ({
 };
 export const fetchSingleRequest = async (id: string): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     const res = await axiosInstance(`${endpoints.watches.get_single}/${id}`, {
       headers: {

@@ -6,7 +6,7 @@ import { cookies } from "next/headers";
 
 export default async function Home({ params }: { params: { lang: "ar" | "en" } }) {
   const session = await getServerSession(authOptions);
-  const apiToken = cookies()?.get("access_token")?.value;
+  const apiToken = cookies()?.get("access_token_complexes")?.value;
 
   if (session && apiToken) {
     redirect("/dashboard");

@@ -5,7 +5,7 @@ import { cookies } from 'next/headers';
 
 
 export const getImageUrl = async ({ image }: { image: FormData }): Promise<any> => {
-  const accessToken = cookies().get('access_token')?.value;
+  const accessToken = cookies().get('access_token_complexes')?.value;
   const lang = cookies().get('Language')?.value;
 
   try {

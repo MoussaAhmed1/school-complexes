@@ -13,7 +13,7 @@ import { ITEMS_PER_PAGE } from "../Global-variables";
 
 export const fetchUsers = async (): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     const res = await axiosInstance.get('/user/schools', {   
       headers: {
@@ -33,7 +33,7 @@ export const fetchUsers = async (): Promise<any> => {
 export const AddUser = async (formData: FormData,role: "schools"): Promise<any> => {
     const lang = cookies().get("Language")?.value;
     try {
-      const accessToken = cookies().get("access_token")?.value;
+      const accessToken = cookies().get("access_token_complexes")?.value;
       await axiosInstance.post(endpoints.users.register_school, formData, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -54,7 +54,7 @@ export const AddUser = async (formData: FormData,role: "schools"): Promise<any> 
 export const UpdateUser = async (formData: FormData,role:"parents" | "drivers" | "schools" |"security"|"admins"|'SUPERVISOR',id?:string): Promise<any> => {
     const lang = cookies().get("Language")?.value;
     try {
-      const accessToken = cookies().get("access_token")?.value;
+      const accessToken = cookies().get("access_token_complexes")?.value;
       await axiosInstance.put(endpoints.users.update, formData, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -78,7 +78,7 @@ export const UpdateUser = async (formData: FormData,role:"parents" | "drivers" |
 export const UpdateAdminProfile = async (formData: FormData): Promise<any> => {
     const lang = cookies().get("Language")?.value;
     try {
-      const accessToken = cookies().get("access_token")?.value;
+      const accessToken = cookies().get("access_token_complexes")?.value;
      const res = await axiosInstance.put(endpoints.users.update, formData, {
         headers: {
           Authorization: `Bearer ${accessToken}`,
@@ -98,7 +98,7 @@ export const UpdateAdminProfile = async (formData: FormData): Promise<any> => {
 export const removeUser = async ({id,revalidateData}:{id:string,revalidateData?:string}): Promise<any> => {
     const lang = cookies().get("Language")?.value;
     try {
-      const accessToken = cookies().get("access_token")?.value;
+      const accessToken = cookies().get("access_token_complexes")?.value;
       await axiosInstance.delete(endpoints.users.delete, {
         params: {
           id
@@ -123,7 +123,7 @@ export const removeUser = async ({id,revalidateData}:{id:string,revalidateData?:
 
   export const fetchSingleUser = async (id: string): Promise<any> => {
     const lang = cookies().get("Language")?.value;
-    const accessToken = cookies().get("access_token")?.value;
+    const accessToken = cookies().get("access_token_complexes")?.value;
     try {
       const res = await axiosInstance(`${endpoints.users.fetch}/${id}`, {
         headers: {
@@ -142,7 +142,7 @@ export const fetchCities = async ({
   limit = ITEMS_PER_PAGE,
 }: Params): Promise<any> => {
   const lang = cookies().get("Language")?.value;
-  const accessToken = cookies().get("access_token")?.value;
+  const accessToken = cookies().get("access_token_complexes")?.value;
   try {
     const res = await axiosInstance.get(endpoints.users.cities, {
       params: {

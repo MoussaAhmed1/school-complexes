@@ -12,7 +12,7 @@ export interface ILogedUser {
   gender: string;
   language: string;
   fcm_token: any;
-  access_token: string;
+  access_token_complexes: string;
 }
 
 export interface IUser {
